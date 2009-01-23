@@ -11,7 +11,13 @@
         </LinearGradientBrush>
     </UserControl.Resources>
 
-    <Grid x:Name="LayoutRoot" Background="White">
+    <Grid x:Name="LayoutRoot">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0, 0.3" StartPoint="1, 0.8" >
+                <GradientStop Color="#FF000000"/>
+                <GradientStop Color="#FFFFFFFF" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" MinHeight="36"/>
             <RowDefinition Height="*"/>
@@ -19,8 +25,8 @@
         <Canvas Grid.Row="0" Background="{StaticResource titleBarBrush}">
             <TextBlock Text="Fancy" Width="Auto" TextWrapping="Wrap" Height="24" FontFamily="Trebuchet MS" Foreground="{StaticResource titleTextBrush}" FontSize="20" FontStyle="Italic" FontWeight="Bold" Canvas.Left="8" Canvas.Top="8" />
             <TextBlock Text="F# App ::" Width="93.346" TextWrapping="Wrap" FontWeight="Bold" FontFamily="Trebuchet MS" Foreground="{StaticResource titleTextBrush}" FontSize="20" Height="26" Canvas.Left="67.938" Canvas.Top="8" />
-            <TextBlock x:Name="subAppTitle" Text="TextBlock" FontFamily="Trebuchet MS" FontSize="20" TextWrapping="Wrap" Foreground="{StaticResource titleTextBrush}" Height="24.554" Width="476.5" Canvas.Left="158.032" Canvas.Top="8" />
+            <TextBlock x:Name="moduleTitle" Text="TextBlock" FontFamily="Trebuchet MS" FontSize="20" TextWrapping="Wrap" Foreground="{StaticResource titleTextBrush}" Height="24.554" Width="476.5" Canvas.Left="158.032" Canvas.Top="8" />
         </Canvas>
-        <ContentControl x:Name="subAppContent" Margin="8,8,8,8" Grid.Row="1"/>
+        <ContentControl x:Name="moduleContent" Margin="8,8,8,8" Grid.Row="1" />
     </Grid>
 </UserControl>

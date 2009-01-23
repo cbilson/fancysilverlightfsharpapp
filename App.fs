@@ -12,10 +12,10 @@ namespace FancySilverligthFSharpApp
         
         let rootVisual = AgUtil.loadXamlUserControl "Container"
         
-        let contentContainer = rootVisual.FindName("subAppContent") :?> ContentControl
+        let contentContainer = rootVisual.FindName("moduleContent") :?> ContentControl
 
         let setTitle text =
-            let title = rootVisual.FindName("subAppTitle") :?> TextBlock
+            let title = rootVisual.FindName("moduleTitle") :?> TextBlock
             title.Text <- text
             
         let showDifferenceAnalysis =
