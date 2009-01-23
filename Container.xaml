@@ -1,0 +1,26 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	d:DesignWidth="640" d:DesignHeight="480" Width="Auto" Height="Auto" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d">
+
+    <UserControl.Resources>
+        <SolidColorBrush x:Key="titleTextBrush" Color="#FFE9E3E3"/>
+        <LinearGradientBrush x:Key="titleBarBrush" EndPoint="1,0.5" StartPoint="0,0.5">
+            <GradientStop Color="#FF000000"/>
+            <GradientStop Color="#FF881A1A" Offset="1"/>
+        </LinearGradientBrush>
+    </UserControl.Resources>
+
+    <Grid x:Name="LayoutRoot" Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" MinHeight="36"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Canvas Grid.Row="0" Background="{StaticResource titleBarBrush}">
+            <TextBlock Text="Fancy" Width="Auto" TextWrapping="Wrap" Height="24" FontFamily="Trebuchet MS" Foreground="{StaticResource titleTextBrush}" FontSize="20" FontStyle="Italic" FontWeight="Bold" Canvas.Left="8" Canvas.Top="8" />
+            <TextBlock Text="F# App ::" Width="93.346" TextWrapping="Wrap" FontWeight="Bold" FontFamily="Trebuchet MS" Foreground="{StaticResource titleTextBrush}" FontSize="20" Height="26" Canvas.Left="67.938" Canvas.Top="8" />
+            <TextBlock x:Name="subAppTitle" Text="TextBlock" FontFamily="Trebuchet MS" FontSize="20" TextWrapping="Wrap" Foreground="{StaticResource titleTextBrush}" Height="24.554" Width="476.5" Canvas.Left="158.032" Canvas.Top="8" />
+        </Canvas>
+        <ContentControl x:Name="subAppContent" Margin="8,8,8,8" Grid.Row="1"/>
+    </Grid>
+</UserControl>
