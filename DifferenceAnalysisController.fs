@@ -32,7 +32,7 @@ namespace FancySilverligthFSharpApp
             
         let createDifferenceAnalysisReport xs difs =
             let writer = new StringWriter()
-            writer.WriteLine("Analysing sequence:")
+            writer.WriteLine("Analyzing sequence:")
             writer.WriteLine(String.Join(", ", (xs |> List.map (fun x -> x.ToString()) |> Array.of_list)))
             writer.WriteLine()
             writer.WriteLine("Results:")
