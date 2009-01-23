@@ -5,10 +5,10 @@
     <StackPanel x:Name="LayoutRoot">
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top">
             <TextBlock Height="30" HorizontalAlignment="Right" VerticalAlignment="Top" Width="167" Text="Initial Terms:" TextWrapping="Wrap" TextAlignment="Right" />
-            <TextBox Height="30" Width="300" Margin="0,0,8,0" VerticalAlignment="Top" Text="TextBox" TextWrapping="Wrap" x:Name="termsTextBox"/>
+            <TextBox Height="30" Width="300" Margin="0,0,8,0" VerticalAlignment="Top" Text="" TextWrapping="Wrap" x:Name="termsTextBox"/>
         </StackPanel>
         <TextBlock Height="19.25" Width="118" Canvas.Left="8.25" Canvas.Top="9.75" Text="Results:" TextWrapping="Wrap"/>
-        <TextBox Height="398" Width="624" Canvas.Top="37" Text="TextBox" TextWrapping="Wrap" FontFamily="Courier New" FontSize="14" x:Name="resultsTextBox"/>
+        <TextBox Height="398" Width="624" Canvas.Top="37" Text="" TextWrapping="Wrap" FontFamily="Courier New" FontSize="14" x:Name="resultsTextBox"/>
         <TextBlock Text="Try: -12, -11, 6, 45, 112, 213, 354, 541, 780, 1077" />
     </StackPanel>
 </UserControl>

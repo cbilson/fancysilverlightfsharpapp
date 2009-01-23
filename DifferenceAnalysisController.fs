@@ -41,7 +41,21 @@ namespace FancySilverligthFSharpApp
                                                       |> Array.of_list
                                          writer.WriteLine(String.Join(", ", xs')))
             writer.WriteLine()
+            
             writer.WriteLine(degreeName xs)
+            writer.WriteLine()
+
+            let continued = DifferenceAnalysis.continue' xs
+            let x, y, z = Seq.nth(0) continued,
+                          Seq.nth(1) continued,
+                          Seq.nth(2) continued  
+
+            // NOTE: Silverlight gives a MethodAccessException when using:
+            // writer.WriteLine("Next 3 elements would be: {0}, {1}, and {2}", x, y, z)
+            writer.Write("Next 3 elements would be: {0}, ", x)
+            writer.Write("{0}, ", y)
+            writer.WriteLine("and {0}", z)
+            
             writer.ToString()
             
         let runDifferenceAnalysis args =
@@ -51,7 +65,7 @@ namespace FancySilverligthFSharpApp
                              createDifferenceAnalysisReport xs difs
                          with
                             | Failure msg -> msg
-                            | _ -> ""
+                            | ex -> ex.ToString()
                 
             resultsTextBox.Text <- report
 
